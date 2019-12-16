@@ -1,0 +1,1 @@
+truncate table PUBLIC.EVENT_LOGS;

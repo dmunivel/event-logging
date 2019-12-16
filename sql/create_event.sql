@@ -1,0 +1,1 @@
+create table if not exists event_logs (batch_id BIGINT ,event_id varchar(45),event_duration INTEGER ,log_type varchar(45),host varchar(45),event_alert char(1));
