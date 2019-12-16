@@ -1,0 +1,14 @@
+/*C1*/SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+COMMIT
+/*C2*/SET SCHEMA PUBLIC
+create table if not exists event_logs (batch_id BIGINT ,event_id varchar(45),event_duration INTEGER ,log_type varchar(45),host varchar(45),event_alert char(1))
+DISCONNECT
+/*C4*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C3*/SET SCHEMA PUBLIC
+INSERT INTO EVENT_LOGS VALUES(1,'scsmbstgra',5,'APPLICATION_LOG','12345','Y')
+COMMIT
+INSERT INTO EVENT_LOGS VALUES(1,'scsmbstgrc',8,NULL,NULL,'Y')
+COMMIT
+DISCONNECT

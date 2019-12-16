@@ -8,7 +8,6 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile "joda-time:joda-time:2.2"
     testCompile "junit:junit:4.12"
     compile "org.hsqldb:hsqldb:2.4.1"
     compile "com.fasterxml.jackson.core:jackson-databind:2.10.1"
@@ -18,9 +17,10 @@ dependencies {
     compile "commons-io:commons-io:2.6"
 }
 
-
-
 jar {
     baseName = 'event-logging'
     version =  '0.1.0'
+    manifest {
+        attributes 'Main-Class': 'com.cs.event.EventLogProcessor'
+    }
 }
